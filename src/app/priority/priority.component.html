@@ -1,0 +1,63 @@
+<div class="priority">
+    <h1>{{priority.title}}</h1> 
+    <h3>Status: <span>{{priority.status}}</span></h3>
+    <h3>Description</h3>
+    <p class="description">{{priority.description}}</p>
+    <div class="dates">
+        <div class="date__created">
+            <h3>Date Created: </h3>
+            <p class="description">{{priority.dateCreated | date:'longDate'}}</p>
+        </div>
+        <div class="date__target">
+            <h3>Target Completion Date: </h3>
+            <p class="description">{{priority.targetCompletionDate | date:'longDate'}}</p>
+        </div>
+    </div>
+    <div class="priority__notes">
+        <h3>Progress Notes: ({{priority.entries?.length}})</h3>
+        <div class="note" *ngFor='let note of priority.entries'>
+            <p><strong>Created on {{note.dateCreated | date:'longDate'}}</strong></p>
+            <p>{{note.description}}</p>
+        </div>
+        <div class="notes__addNote" *ngIf='newNote'>
+            
+                <textarea name="noteValue" [(ngModel)]="noteValue" id="note__input" placeholder="Add a Note" cols="40" rows="5"></textarea>
+                <br>
+                <div class="addNote__buttons">
+                    <button class='button__addNote' (click)='addNote()' [disabled]="!noteValue">Submit Note</button>
+                    <button class='button__addNote' type='button' (click)='newNote = false'>Cancel</button>
+                </div>
+            
+            
+            <!-- <form #noteForm="ngForm" (ngSubmit)='addNote(noteForm.value)'>
+                <textarea name="note" (ngModel)="note" id="note__input" placeholder="Add a Note" cols="40" rows="5"></textarea>
+                <br>
+                <div class="addNote__buttons">
+                    <button class='button__addNote' type='submit' [disabled]="noteForm.controls.note">Submit Note</button>
+                    <button class='button__addNote' type='button' (click)='newNote = false'>Cancel</button>
+                </div>
+               
+                
+            </form> -->
+            
+           
+            
+           
+        </div>
+    </div>
+    <div class="priority__buttons" *ngIf='!newNote'>
+        <button class="button__completed" (click)='markComplete()'>
+            Mark Complete
+        </button>
+        <button class="button__addNote" (click)='addNoteClicked()'>
+            +Add Note
+        </button>
+        <button class="button__back" (click)='goBack()'>
+            Go Back
+        </button>
+    </div>
+    
+
+
+
+</div>

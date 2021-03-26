@@ -1,0 +1,156 @@
+.dashboard {
+    /* padding: 50px; */
+    
+}
+
+.dashboard__header {
+    padding: 20px 50px 25px 50px;
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: space-evenly; */
+    /* background-color: rgb(30, 64, 123, 0.4); */
+    background-color: #98b6e9;
+    border-bottom: 1px solid #000;
+}
+
+.header__left {
+    display: flex;
+    align-items:flex-end;
+
+}
+
+.header__left h1 {
+    font-size: 40px;
+    
+
+    
+}
+
+
+.header__left * {
+    margin-left: 20px;
+}
+
+.header__filter h3 {
+    font-size: 22px;
+    /* color: white; */
+}
+
+.select__status {
+    height: 25px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.select__status option {
+    font-size: 14px;
+    
+}
+
+.header__right {
+    margin-left: 70px;
+}
+
+
+.header__addPriority {
+    /* background-color:  rgb(30, 64, 123); */
+    background-color: rgb(30, 64, 123, 1);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+}
+
+.header__right > h2:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.dashboard__body {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+
+.dashboard__left {
+
+    flex: 1;
+    padding: 50px 0 50px 50px;
+
+ 
+}
+
+.dashboard__right {
+
+    flex: 0.8;
+    padding: 70px 70px 70px 0;
+   
+   
+}
+
+.left__priorities {
+    display: flex;
+    flex-wrap:wrap;
+    
+}
+
+.left__priority {
+    background-color: white;
+    margin: 20px 20px 20px 0;
+    height: 150px;
+    padding: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 400px;
+    transition: all 0.3s ease-in-out;
+}
+
+.left__priority:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  }
+
+.selected {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    border-left: 10px solid rgb(30, 64, 123);
+    /* background-color: #f3f3f3; */
+}
+
+.left__priority span {
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.left__priority h4 {
+    font-size: 20px;
+}
+
+.progress {
+    color: red;
+}
+
+.complete {
+    color: green;
+}
+
+.left__priority h1 {
+    margin-bottom: 10px;
+}
+
+
+.right__priorities {
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+  
+}

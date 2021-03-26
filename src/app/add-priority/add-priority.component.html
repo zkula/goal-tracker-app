@@ -1,0 +1,32 @@
+<div class="add">
+    <div class="add__body">
+        <h1>Create New Priority</h1>
+        <form [formGroup]="priorityForm" (ngSubmit)='savePriority(priorityForm.value)' autocomplete="off" novalidate>
+            <div class="form-group" [ngClass]="{'error' : !validateTitle()}">
+                <h2 for="title">TITLE: </h2>
+                <p>Write a headline to describe your priority.</p>
+                <input formControlName="title" id="title" type="text" class="form-control" maxlength="50" placeholder="Enter the title of the priority" />
+                <em *ngIf='!validateTitle()'>Required</em>
+            </div>
+            <div class="form-group" [ngClass]="{'error' : !validateDescription()}">
+                <h2 for="description">DESCRIPTION: </h2>
+                <p>Write a brief description about how you plan to achieve your priority or what success looks like.</p>
+                <!-- <input formControlName="description" id="description" type="text" class="form-control" maxlength="4000" placeholder="Enter the priority description" /> -->
+                <textarea formControlName="description"  id="description" placeholder="Enter the priority description" cols="40" rows="5"></textarea>
+                <em *ngIf='!validateDescription()'>Required</em>
+            </div>
+            <div class="form-group" [ngClass]="{'error' : !validateTargetDate()}">
+                <h2 for="targetCompletionDate">TARGET COMPLETION DATE: </h2>
+                <p>Choose a date that is relevant to what you are trying to achieve.</p>
+                <input formControlName="targetCompletionDate" id="targetCompletionDate" type="date" class="form-control" />
+                <em *ngIf='!validateTargetDate()'>Required</em>
+            </div>
+            <div class="form__buttons">
+                <button  type='submit'>Add Priority</button>
+                <button  type='button' (click)='exitForm()'>Cancel</button>
+            </div>
+        </form>
+    </div>
+    
+</div>
+

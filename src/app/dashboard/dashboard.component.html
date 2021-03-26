@@ -1,0 +1,72 @@
+<div class="dashboard">
+    <div class="dashboard__header">
+        <div class="header__left">
+            <h1>Priorities List</h1>
+        <div class="header__filter">
+            <h3>Filter By: </h3>
+            <select name="status" class='select__status' (change)="filterPriorities($event.target.value)">
+                <option value="all">All</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Complete">Complete</option>
+            </select>
+            
+        </div>
+        <div class="header__filter">
+            <h3>Order By: </h3>
+            <select name="value" class='select__status' (change)="sortPriorities($event.target.value)">
+                <option value="dateCreated">Date Created (desc)</option>
+                <option value="status">Status</option>
+                <option value="targetCompletionDate">Target Completion Date</option>
+            </select>
+        </div>
+        </div>
+        <div class="header__right">
+            <h2 class="header__addPriority"><a [routerLink]="['/new']" >Create New Priority</a></h2>
+
+        </div>
+        
+    </div>
+    <div class="dashboard__body">
+        <div class="dashboard__left">
+        
+        
+            <div class="left__priorities">
+                <div 
+                class="left__priority" 
+                *ngFor='let priority of filteredPriorities' 
+                (click)='priorityClicked(priority)' 
+                [ngClass]="clickedId === priority.id && 'selected' "
+                >
+                    <h1>{{priority.title}}</h1> 
+                    <h4>Status: <span [ngClass]="priority.status === 'In Progress'? 'progress' : 'complete' ">{{priority.status}}</span></h4>
+                    <h4>Date Created: <span>{{priority.dateCreated | date:'longDate'}}</span></h4>
+                    <h4>Target Completion Date: <span>{{priority.targetCompletionDate | date:'longDate'}}</span></h4>
+        
+                </div>
+            </div>
+           
+        </div>
+        <div class="dashboard__right">
+            <div class="right__description" *ngIf='!chosenPriority'>
+                <h1>This is an Angular application designed to track personal priorities.</h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1>Click on a priority to view it, add progress notes, or mark it complete.</h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1>Click the '<a style="text-decoration: underline;" [routerLink]="['/new']">Create New Priority</a>' button to add another priority!</h1>
+                
+            </div>
+            <div class="right__priorities" *ngIf='chosenPriority'>
+                <app-priority [priority]='chosenPriority' (return)='this.chosenPriority = false; this.clickedId = null;'></app-priority>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+

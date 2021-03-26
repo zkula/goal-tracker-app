@@ -1,0 +1,93 @@
+.priority {
+    /* background-color: white; */
+    /* margin: 20px 0 20px 0; */
+    /* height: 80px; */
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.priority span {
+    font-size: 1em;
+    font-weight: lighter;
+    padding-left: 10px;
+}
+
+.priority h1, h3 {
+    margin-bottom: 10px;
+}
+
+.description {
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.dates {
+    display: flex;
+}
+
+.date__created {
+    flex: 1;
+
+}
+
+.date__target {
+    flex: 1;
+
+}
+
+.priority__notes {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 10px 0;
+}
+
+.note {
+    padding: 10px 0;
+}
+
+.priority__buttons {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button__completed {
+    height: 30px;
+    color: green;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.button__addNote {
+    height: 30px;
+    color: red;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.button__back {
+    height: 30px;
+    color: black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.addNote__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.addNote__buttons  button {
+    margin-right: 50px;
+}
+
+button[disabled] {
+    color: grey;
+    cursor: unset;
+}
+
+#note__input {
+    height: 40px;
+    width: 500px;
+}
