@@ -124,22 +124,30 @@ export class PriorityService {
   }
 
   markComplete(id: number){
-    this.priorities[id].status = 'Complete';
-    console.log(this.priorities[id])
+    let index = this.priorities.findIndex(priority => {if(priority.id === id){return true}});
+    this.priorities[index].status = 'Complete';
+    console.log(this.priorities[index])
   }
 
   updateNote(id: number, note: string){
     console.log('priorities: ', this.priorities)
+    let index = this.priorities.findIndex(priority => {if(priority.id === id){return true}});
     //search priorities, update property indicated
     // let newPriority: IPriority = this.priorities.find(priority => priority.id === id);
     console.log('id: ', id, "note: ", note);
-    let noteId = this.priorities[id].entries? this.priorities[id].entries.length : 0;
-    this.priorities[id].entries.push({
+    let noteId = this.priorities[index].entries? this.priorities[index].entries.length : 0;
+    this.priorities[index].entries.push({
       id: noteId,
       dateCreated: new Date(),
       description: note,
     });
-    console.log(this.priorities[id])
+    console.log(this.priorities[index])
+  }
+
+  deletePriority(id:number){
+    console.log("deleting id ", id, ". Curruent priorities: ", this.priorities);
+    this.priorities = this.priorities.filter(priority => priority.id !== id);
+    console.log("new priorities: ", this.priorities);
   }
 
 }

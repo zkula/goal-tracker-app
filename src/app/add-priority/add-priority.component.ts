@@ -49,9 +49,10 @@ export class AddPriorityComponent implements OnInit {
     if(this.priorityForm.valid){
       console.log("form values: ", formValues)
       let length = this.priorityService.getPriorities().length;
-      console.log ("length: ", length)
+      let id = this.priorityService.getPriorities()[length-1].id + 1;
+      console.log ("id: ", id)
       let newPriority: IPriority = {
-        id: length,
+        id: id,
         title: formValues.title,
         status: 'In Progress',
         dateCreated: new Date(),

@@ -6,13 +6,32 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
+.priority__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.priority__header button {
+    color: red;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 2px solid black;
+}
+
+
+
 .priority span {
     font-size: 1em;
     font-weight: lighter;
     padding-left: 10px;
 }
 
-.priority h1, h3 {
+ h1, h3 {
     margin-bottom: 10px;
 }
 
@@ -42,35 +61,51 @@
     padding: 10px 0;
 }
 
+.notes__header {
+    display: flex;
+    align-items:baseline;
+}
+
 .note {
     padding: 10px 0;
 }
 
 .priority__buttons {
-    margin: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.button__completed {
-    height: 30px;
-    color: green;
-    font-weight: bolder;
+button:hover {
+  background-color: rgb(230, 230, 230);
+
+}
+
+.button__addNote, .button__completed, .button__delete {
+    font-weight: bold;
     cursor: pointer;
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.button__completed {
+    /* height: 40px; */
+    color: green;
+   
+    
 }
 
 .button__addNote {
     height: 30px;
     color: red;
-    font-weight: bolder;
-    cursor: pointer;
+    margin-left: 30px;
 }
 
-.button__back {
-    height: 30px;
-    color: black;
-    font-weight: bolder;
-    cursor: pointer;
+.button__delete {
+    height: 40px;
+    color: red;
+    
 }
 
 .addNote__buttons {
