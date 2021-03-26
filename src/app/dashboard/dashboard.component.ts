@@ -2,6 +2,12 @@ import { Component, OnChanges, OnInit } from '@angular/core';
 import { IPriority } from '../ipriority';
 import { PriorityService } from '../services/priority.service';
 
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import WorkIcon from '@material-ui/icons/Work';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+import BrushIcon from '@material-ui/icons/Brush';
+import ImportContactsIcon from '@material-ui/icons/ImportContacts';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

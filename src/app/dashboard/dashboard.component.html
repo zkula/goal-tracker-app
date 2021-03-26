@@ -37,7 +37,25 @@
                 (click)='priorityClicked(priority)' 
                 [ngClass]="clickedId === priority.id && 'selected' "
                 >
-                    <h1>{{priority.title}}</h1> 
+                    <!-- <h1>{{priority.title}}</h1>  -->
+                    <div class="priority__title">
+                        <h1>{{priority.title}}</h1>
+                        <div class="priority__titleIcon">
+                            
+                            <div *ngIf ="priority.category === 'health'">
+                                <mat-icon>favorite</mat-icon>
+                            </div>
+                            <div *ngIf ="priority.category === 'mind'">
+                                <mat-icon>psychology</mat-icon>
+                            </div>
+                            <div *ngIf ="priority.category === 'work'"> 
+                                <mat-icon>computer</mat-icon>
+                            </div>
+                            <div *ngIf ="priority.category === 'hobby'">
+                                <mat-icon>brush</mat-icon>
+                            </div>
+                        </div> 
+                    </div>
                     <h4>Status: <span [ngClass]="priority.status === 'In Progress'? 'progress' : 'complete' ">{{priority.status}}</span></h4>
                     <h4>Date Created: <span>{{priority.dateCreated | date:'longDate'}}</span></h4>
                     <h4>Target Completion Date: <span>{{priority.targetCompletionDate | date:'longDate'}}</span></h4>

@@ -14,6 +14,7 @@ export class PriorityService {
       dateCreated: new Date('2021-02-02'),
       targetCompletionDate: new Date('2021-03-25'),
       description: 'I am learning the Angular framework for front-end web development. Completion of this priority will be measured by completion of my personal project.',
+      category: 'work',
       entries: [
         {
           id: 0,
@@ -45,6 +46,7 @@ export class PriorityService {
       dateCreated: new Date('2021-01-10'),
       targetCompletionDate: new Date('2021-08-05'),
       description: 'I am training for the half marathon this year. I need to be able to run 13 miles by August to be ready. I will track my running progress in this priority.',
+      category: 'health',
       entries: [
         {
           id: 0,
@@ -66,6 +68,7 @@ export class PriorityService {
       dateCreated: new Date('2021-03-01'),
       targetCompletionDate: new Date('2021-12-31'),
       description: 'My goal this year is to read 20 books. I will track my progress in the notes throughout the year.',
+      category: 'mind',
       entries: [
         {
           id: 0,
@@ -92,6 +95,7 @@ export class PriorityService {
       dateCreated: new Date('2021-02-01'),
       targetCompletionDate: new Date('2021-03-04'),
       description: 'I want to be able to play Everlong by Foo Fighters on the drums. I will track my drumming sessions and progress in the notes.',
+      category: 'hobby',
       entries: [
         {
           id: 0,

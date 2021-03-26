@@ -5,6 +5,26 @@
     </div>
     
     <h3>Status: <span>{{priority.status}}</span></h3>
+    <div class="priority__category" *ngIf='priority.category'>
+        <h3>Category: <span>{{priority.category.charAt(0).toUpperCase() + priority.category.slice(1)}}</span></h3> 
+        <div class="category__icon">
+                                
+            <div *ngIf ="priority.category === 'health'">
+                <mat-icon>favorite</mat-icon>
+            </div>
+            <div *ngIf ="priority.category === 'mind'">
+                <mat-icon>psychology</mat-icon>
+            </div>
+            <div *ngIf ="priority.category === 'work'"> 
+                <mat-icon>computer</mat-icon>
+            </div>
+            <div *ngIf ="priority.category === 'hobby'">
+                <mat-icon>brush</mat-icon>
+            </div>
+        </div>     
+        
+    </div>
+    
     <h3>Description</h3>
     <p class="description">{{priority.description}}</p>
     <div class="dates">

@@ -43,6 +43,18 @@ em {
     font-size: 20px;
 }
 
+option {
+    font-size: 15px;
+    
+}
+
+select {
+    border-radius: 5px;
+    display: inline; 
+    margin-left: 10px; 
+    height: 30px;
+}
+
 .form-group input, textarea {
     font-size: 15px;
     padding: 5px;

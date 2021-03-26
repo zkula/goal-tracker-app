@@ -18,16 +18,19 @@ export class AddPriorityComponent implements OnInit {
   private title: FormControl;
   private description: FormControl;
   private targetCompletionDate: FormControl
+  private category: FormControl
 
   ngOnInit(): void {
     this.title = new FormControl('',Validators.required);
     this.targetCompletionDate = new FormControl('', Validators.required);
     this.description = new FormControl('', Validators.required);
+    this.category = new FormControl();
 
     this.priorityForm = new FormGroup({
       title: this.title,
       targetCompletionDate: this.targetCompletionDate,
       description: this.description,
+      category: this.category,
     })
   }
 
@@ -57,6 +60,7 @@ export class AddPriorityComponent implements OnInit {
         status: 'In Progress',
         dateCreated: new Date(),
         targetCompletionDate: new Date(formValues.targetCompletionDate),
+        category: formValues.category,
         description: formValues.description,
         entries: [],
       }
