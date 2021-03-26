@@ -61,7 +61,7 @@
         </div>
     </div>
     <div class="priority__buttons" *ngIf='!newNote'>
-        <button class="button__completed" (click)='markComplete()'>
+        <button class="button__completed" [disabled]="priority.status === 'Complete'" (click)='markComplete()'>
             Mark Complete
         </button>
        

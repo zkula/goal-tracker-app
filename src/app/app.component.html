@@ -1,11 +1,12 @@
 <div class="home">
-  <!-- <div class="home_header">
-    <h1><a [routerLink]="['/dashboard']" routerLinkActive="activeLink">Priorities Dashboard</a></h1>
-    <h1><a [routerLink]="['/login']" routerLinkActive="activeLink">Login</a></h1>
-  </div> -->
+  
   <div class="body">
     <router-outlet></router-outlet>
   </div>
+  <div class="footer" *ngIf="quote">
+    <h2>Daily Quote: <i class="footer_i">{{this.quote?.slip.advice}}</i></h2>
+    <p>Retrieved from https://api.adviceslip.com/</p>
+</div>
   
 </div>
 

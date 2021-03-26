@@ -2,12 +2,6 @@ import { Component, OnChanges, OnInit } from '@angular/core';
 import { IPriority } from '../ipriority';
 import { PriorityService } from '../services/priority.service';
 
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import WorkIcon from '@material-ui/icons/Work';
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import BrushIcon from '@material-ui/icons/Brush';
-import ImportContactsIcon from '@material-ui/icons/ImportContacts';
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -19,7 +13,7 @@ export class DashboardComponent implements OnInit, OnChanges {
   orderBy: string = 'dateCreated';
   filteredPriorities: IPriority[];
   chosenPriority: IPriority ;  //if priority is chosen, the priority details will display on the right side
-
+ 
 
   constructor(private priorityService: PriorityService) { }
 
@@ -27,9 +21,8 @@ export class DashboardComponent implements OnInit, OnChanges {
     //get priorites from service
     this.priorities = this.priorityService.getPriorities();
     this.filteredPriorities = [...this.priorities];
-    console.log("oninit filteredP: ",this.filteredPriorities)
     this.filteredPriorities.sort(sortByDateCreated);
-    console.log("oninit filteredP Ordered: ",this.filteredPriorities)
+    
   }
 
   ngOnChanges():void {

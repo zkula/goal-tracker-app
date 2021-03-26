@@ -1,7 +1,7 @@
 <div class="dashboard">
     <div class="dashboard__header">
         <div class="header__left">
-            <h1>Priorities List</h1>
+            <h1>My Priorities</h1>
         <div class="header__filter">
             <h3>Filter By: </h3>
             <select name="status" class='select__status' (change)="filterPriorities($event.target.value)">
@@ -66,24 +66,20 @@
         </div>
         <div class="dashboard__right">
             <div class="right__description" *ngIf='!chosenPriority'>
+                <i>
                 <h1>This is an Angular application designed to track personal priorities.</h1>
-                <br>
-                <br>
-                <br>
-                <br>
+                <br><br><br><br>
                 <h1>Click on a priority to view it, add progress notes, mark it complete, or delete it.</h1>
-                <br>
-                <br>
-                <br>
-                <br>
+                <br><br><br><br>
                 <h1>Click the '<a style="text-decoration: underline;" [routerLink]="['/new']">Create New Priority</a>' button to add another priority!</h1>
-                
+                </i>
             </div>
             <div class="right__priorities" *ngIf='chosenPriority'>
                 <app-priority [priority]='chosenPriority' (return)='this.chosenPriority = false; this.clickedId = null;'></app-priority>
             </div>
         </div>
     </div>
+    
     
 </div>
 
