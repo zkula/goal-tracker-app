@@ -4,8 +4,13 @@
     <router-outlet></router-outlet>
   </div>
   <div class="footer" *ngIf="quote">
-    <h2>Daily Quote: <i class="footer_i">{{this.quote?.slip.advice}}</i></h2>
+    <div class="footer__quote">
+      <h2>Daily Quote: <i class="footer_i">{{this.quote?.slip.advice}}</i></h2>
+      <button (click)='getNewQuote()'>Get New Quote</button>
+    </div>
+    
     <p>Retrieved from https://api.adviceslip.com/</p>
+   
 </div>
   
 </div>

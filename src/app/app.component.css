@@ -27,9 +27,8 @@ justify-content: space-between;
     /* background: rgb(30, 64, 123, 1); */
     background: #06303A;
     font-size:1em;
-    text-align: center;
     /* line-height:100px; */
-    padding: 20px;
+    padding: 20px 50px;
  }
 
  .footer p {
@@ -38,6 +37,22 @@ justify-content: space-between;
 
  .footer_i {
      padding-left: 10px;
+ }
+ 
+ .footer__quote {
+     display: flex;
+     align-items: center;
+ }
+
+ .footer__quote button {
+    background-color: rgb(243, 243, 243);
+    color: #06303A;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 50px;
+    font-size: 1em;
  }
 
 .home_header {

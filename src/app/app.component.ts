@@ -13,6 +13,10 @@ export class AppComponent implements OnInit {
   constructor(private quoteService:QuoteService){}
 
   ngOnInit(){
+    this.getNewQuote();
+  }
+
+  getNewQuote() {
     this.quoteService.getQuote().subscribe({
       next: quote => this.quote = quote,
       error: err => console.log(err)
