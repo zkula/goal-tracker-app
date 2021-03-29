@@ -4,6 +4,7 @@ export interface IPriority {
     status: string,
     dateCreated: Date,
     targetCompletionDate: Date,
+    completedDate?: Date,
     description: string,
     category?: "health" | "work" | "mind" | "hobby",
     entries?: IEntries[]

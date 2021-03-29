@@ -68,6 +68,8 @@ mat-icon {
 
 .dates {
     display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
 }
 
 .date__created {
@@ -78,6 +80,10 @@ mat-icon {
 .date__target {
     flex: 1;
 
+}
+
+.date__complete {
+    flex:1,
 }
 
 .priority__notes {

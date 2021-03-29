@@ -13,6 +13,7 @@ export class PriorityService {
       status: 'Complete',
       dateCreated: new Date('2021-02-02'),
       targetCompletionDate: new Date('2021-03-25'),
+      completedDate: new Date('2021-03-25'),
       description: 'I am learning the Angular framework for front-end web development. Completion of this priority will be measured by completion of my personal project.',
       category: 'work',
       entries: [
@@ -94,6 +95,7 @@ export class PriorityService {
       status: 'Complete',
       dateCreated: new Date('2021-02-01'),
       targetCompletionDate: new Date('2021-03-04'),
+      completedDate: new Date('2021-03-06'),
       description: 'I want to be able to play Everlong by Foo Fighters on the drums. I will track my drumming sessions and progress in the notes.',
       category: 'hobby',
       entries: [
@@ -130,6 +132,7 @@ export class PriorityService {
   markComplete(id: number){
     let index = this.priorities.findIndex(priority => {if(priority.id === id){return true}});
     this.priorities[index].status = 'Complete';
+    this.priorities[index].completedDate = new Date();
     console.log(this.priorities[index])
   }
 

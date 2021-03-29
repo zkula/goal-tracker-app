@@ -36,6 +36,10 @@
             <h3>Target Completion Date: </h3>
             <p class="description">{{priority.targetCompletionDate | date:'longDate'}}</p>
         </div>
+        <div class="date__complete" *ngIf="priority.status === 'Complete'">
+            <h3>Completed On: </h3>
+            <p class="description">{{priority.completedDate | date:'longDate'}}</p>
+        </div>
     </div>
     <div class="priority__notes">
         <div class="notes__header">

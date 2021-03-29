@@ -58,7 +58,8 @@
                     </div>
                     <h4>Status: <span [ngClass]="priority.status === 'In Progress'? 'progress' : 'complete' ">{{priority.status}}</span></h4>
                     <h4>Date Created: <span>{{priority.dateCreated | date:'longDate'}}</span></h4>
-                    <h4>Target Completion Date: <span>{{priority.targetCompletionDate | date:'longDate'}}</span></h4>
+                    <h4 *ngIf="priority.status === 'In Progress'">Target Completion Date: <span>{{priority.targetCompletionDate | date:'longDate'}}</span></h4>
+                    <h4 *ngIf="priority.status === 'Complete'">Completed On: <span>{{priority.completedDate | date:'longDate'}}</span></h4>
         
                 </div>
             </div>
