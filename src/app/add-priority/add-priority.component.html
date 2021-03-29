@@ -1,6 +1,17 @@
 <div class="add">
+    <div class="add__header">
+        <div class="header__left">
+            <h1>Create New Priority</h1>
+        
+        </div>
+        <div class="header__right">
+            <h2 class="header__dashButton"><a [routerLink]="['/dashboard']" >Dashboard</a></h2>
+
+        </div>
+        
+    </div>
     <div class="add__body">
-        <h1>Create New Priority</h1>
+        
         <form [formGroup]="priorityForm" (ngSubmit)='savePriority(priorityForm.value)' autocomplete="off" novalidate>
             <div class="form-group" [ngClass]="{'error' : !validateTitle()}">
                 <h2 for="title">TITLE: </h2>

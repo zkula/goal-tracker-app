@@ -4,14 +4,18 @@
 }
 
 .dashboard__header {
-    padding: 20px 50px 25px 50px;
+    padding: 10px 50px 15px 50px;
     display: flex;
     align-items: flex-end;
     /* justify-content: space-evenly; */
     /* background-color: rgb(30, 64, 123, 0.4); */
     background-color: #06303A;
-    border-bottom: 3px solid #000;
+    border-bottom: 2px solid #000;
     color: #f3f3f3;
+    position:sticky;
+    top: 0;
+    z-index: 100;
+    
 }
 
 
@@ -23,7 +27,7 @@
 
 .header__left h1 {
     font-size: 40px;
-    
+    margin: 0 !important;
 
     
 }
@@ -68,6 +72,7 @@
 .header__right > h2:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 17px rgba(0,0,0, 0.35);
+    
   }
 
 a {
@@ -79,7 +84,7 @@ a {
     flex: 1;
     display: flex;
     justify-content: space-evenly;
-    height: 100%;
+
 }
 
 
